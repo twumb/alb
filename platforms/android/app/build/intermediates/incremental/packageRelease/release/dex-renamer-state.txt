@@ -1,0 +1,4 @@
+#Thu Jul 12 10:13:06 GMT 2018
+base.0=/Users/nadu/Downloads/work/mobile/albrim/platforms/android/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/Users/nadu/Downloads/work/mobile/albrim/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex

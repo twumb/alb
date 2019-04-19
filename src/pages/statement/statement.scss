@@ -1,0 +1,19 @@
+page-statement {
+  .statementTable {
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border: solid 1px #004677;
+    }
+    th {
+      padding: 5px;
+      display: table-cell;
+      width: 25%;
+      background-color: #004677;
+      color: #fff;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #ccc;
+    }
+  }
+}

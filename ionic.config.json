@@ -1,0 +1,7 @@
+{
+  "name": "albrim",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

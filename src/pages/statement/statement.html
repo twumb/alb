@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Statement</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <form [formGroup]="statementForm">
+    <ion-item>
+      <ion-label>Accounts</ion-label>
+      <ion-select formControlName="accountnumber">
+        <ion-option *ngFor="let d of accountDetails" >{{d.acc}}</ion-option>
+      </ion-select>
+    </ion-item>
+  <button ion-button full (click)="viewStatement()" [disabled]="statementForm.invalid">View Statement</button>
+    </form>
+  </ion-list>
+  <div class="statementTable" >
+    <table >
+        <thead>
+                <tr  style="text-align: left">
+                    <th>
+                        Date
+                    </th>
+                    <th >
+                        Credit
+                    </th>
+                    <th >
+                        Debit
+                    </th>
+                    <th >
+                        Balance
+                    </th>
+                </tr>
+        </thead>
+        <tbody>
+                    <tr *ngFor="let n of resultlist" (click)="notify(n)">
+
+                        <td>
+                            {{ n.szdate | date:'mediumDate'}}
+                        </td>
+                        <td>
+                            {{ n.credit | number}}
+                        </td>
+                        <td>
+                            {{ n.debit | number}}
+                        </td>
+                        <td>
+                            {{ n.Balance  | number}}
+                        </td>
+                    </tr>
+        </tbody>
+
+    </table>
+</div>
+</ion-content>
+

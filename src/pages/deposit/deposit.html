@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Fixed Deposit</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+      <form [formGroup]="fixedForm" (ngSubmit)="viewDeposit()">
+      <!-- <form (ngSubmit)="viewDeposit()"> -->
+          <ion-list>
+          <ion-item>
+            <ion-label>Accounts</ion-label>
+            <ion-select formControlName="accountnumber">
+              <ion-option *ngFor="let d of accountDetails" [value]="d.acc">{{d.acc}}</ion-option>
+            </ion-select>
+          </ion-item>
+        <button ion-button type="submit" block [disabled]="fixedForm.invalid" >View Statement</button>
+        </ion-list>
+  </form>
+
+  <div class="container second_menu" >
+      <div class="church_mission_panel church_color_deep" *ngFor="let d of resultlist" >
+          <h3> Total Amount : GHS {{d.invest_total_amt | number}} <span *ngIf="!d.invest_total_amt">0.00</span>
+</h3>
+
+         <p> Maturity Date: {{d.maturity_date | date:'mediumDate'}} </p>
+
+      </div>
+  </div>
+
+  </ion-content>

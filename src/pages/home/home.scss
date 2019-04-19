@@ -1,0 +1,38 @@
+page-home {
+  .church_color_deep {
+    /*background-color:#7f8c8d!important;*/
+    background-color: #004677;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .church_mission_panel {
+    p {
+      padding: 10px;
+      padding-top: 0px;
+      margin-bottom: 0px;
+    }
+    margin-bottom: 30px;
+    padding: 8px;
+    h3 {
+      font-family: 'Robot', sans-serif;
+      font-weight: 300;
+      color: #FFFFFF;
+      margin-bottom: 5px;
+      margin: 10px;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    }
+    h4 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      color: #FFFFFF;
+      margin-bottom: 5px;
+      margin: 10px;
+      padding-bottom: 10px;
+      padding-top: 0px;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+      text-transform: uppercase;
+    }
+  }
+}
